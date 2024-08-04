@@ -89,5 +89,3 @@ I chose SQLite for this database because it's lightweight, easy to set up, and p
     - Open DBeaver and set up a new SQLite connection.
     - Point it to the `events_company_people.db` file in the database directory.
     - You can now explore the tables and see all the data.
-
-Enjoy working with the database! If you have any questions or run into issues, feel free to ask.
