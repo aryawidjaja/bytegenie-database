@@ -1,4 +1,4 @@
-# Database📊
+# ByteGenie Test - Database📊
 
 ## Why SQLite?
 
