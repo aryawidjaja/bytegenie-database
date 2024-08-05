@@ -1,4 +1,5 @@
 # ByteGenie Test - Database📊
+# Database📊
 
 ## Why SQLite?
 
@@ -41,10 +42,7 @@ I chose SQLite for this database because it's lightweight, easy to set up, and p
   - `person_country`: Country where the person is based.
   - `email_pattern`: Pattern for the person's email.
   - `homepage_base_url`: The company's homepage URL this person works for.
-
-- **company_events**
-  - `company_id`: ID of the company.
-  - `event_id`: ID of the event.
+  - `email_address`: Generated email address based on the email pattern.
 
 ## What I Ran Into
 
@@ -56,6 +54,9 @@ I chose SQLite for this database because it's lightweight, easy to set up, and p
 
 3. **Missing and Inconsistent Data:**
    - Handling cases where some data was missing or didn't match up across the different CSV files.
+
+4. **Email Address Generation:**
+   - Creating email addresses based on the `email_pattern column` in the people table.
 
 ## How I'd Improve It
 
@@ -89,3 +90,8 @@ I chose SQLite for this database because it's lightweight, easy to set up, and p
     - Open DBeaver and set up a new SQLite connection.
     - Point it to the `events_company_people.db` file in the database directory.
     - You can now explore the tables and see all the data.
+
+## Notes
+- The init_db.py script reads CSV files from the events-data directory and populates the database. Ensure the CSV files are in the correct format and location.
+- The generate_email_address function constructs email addresses based on patterns provided in the `email_pattern` column of the people table. It handles various patterns like `[first].[last]`, `[first_initial][last]`, etc.
+
