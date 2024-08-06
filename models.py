@@ -55,3 +55,13 @@ class Person(Base):
     email_address = Column(String)
 
     company = relationship('Company', back_populates='people')
+
+class Conversation(Base):
+    __tablename__ = 'conversations'
+    id = Column(Integer, primary_key=True)
+    user_query_summary = Column(String)
+    user_query = Column(String)
+    retrieved_data = Column(String)
+    model_response = Column(String)
+    date_time = Column(String)
+    query_status = Column(String)

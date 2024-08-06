@@ -51,3 +51,13 @@ CREATE TABLE people (
     email_address TEXT,
     FOREIGN KEY (homepage_base_url) REFERENCES companies (homepage_base_url)
 );
+
+CREATE TABLE conversations (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_query_summary TEXT,
+    user_query TEXT,
+    retrieved_data TEXT,
+    model_response TEXT,
+    date_time TEXT,
+    query_status TEXT
+);
